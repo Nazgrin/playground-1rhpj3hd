@@ -63,6 +63,60 @@ print(apple == Fruit("Apple", "Red"))   # True
 print(carrot == apple)                  # False
 ```
 
+```python runnable
+class Fruit:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+
+    def __str__(self):
+        return f"{self.color} {self.name}"
+
+    def __eq__(self, other):
+        if isinstance(other, Fruit):
+            return self.name == other.name and self.color == other.color
+        return False
+
+    def __getitem__(self, key):
+        if key == "name":
+            return self.name
+        elif key == "color":
+            return self.color
+        else:
+            raise KeyError(f"Invalid key: {key}")
+
+    def __setitem__(self, key, value):
+        if key == "name":
+            self.name = value
+        elif key == "color":
+            self.color = value
+        else:
+            raise KeyError(f"Invalid key: {key}")
+
+class Vegetable:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+
+    def __str__(self):
+        return f"{self.color} {self.name}"
+
+    def __eq__(self, other):
+        if isinstance(other, Vegetable):
+            return self.name == other.name and self.color == other.color
+        return False
+```
+
+# Beispiel Verwendung
+apple = Fruit("Apple", "Red")
+
+print(apple["name"])  # Ausgabe: Apple
+print(apple["color"])  # Ausgabe: Red
+
+apple["color"] = "Green"
+print(apple)  # Ausgabe: Green Apple
+
+
 # Advanced usage
 
 If you want a more complex example (external libraries, viewers...), use the [Advanced Python template](https://tech.io/select-repo/429)
