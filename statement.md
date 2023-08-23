@@ -104,7 +104,7 @@ banana["designation"] = "Gros Michel"   #                   __setitem__
 print(banana)                           # Gold Gros Michel
 
 pumpkin = Vegetable("Pumpkin", "Green") 
-pumpkin.color = "Orange"                #                   __setitem__
+pumpkin.color = "Orange"                                   
 print(pumpkin)                          # Orange Pumpkin
 ```
 # Advanced usage
