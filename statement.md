@@ -105,16 +105,16 @@ class Vegetable:
         if isinstance(other, Vegetable):
             return self.name == other.name and self.color == other.color
         return False
-```
 
-# Beispiel Verwendung
+
 apple = Fruit("Apple", "Red")
 
-print(apple["name"])  # Ausgabe: Apple
-print(apple["color"])  # Ausgabe: Red
+print(apple["name"])        # Apple
+print(apple["color"])       # Red
 
 apple["color"] = "Green"
-print(apple)  # Ausgabe: Green Apple
+print(apple)                # Green Apple
+```
 
 
 # Advanced usage
