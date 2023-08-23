@@ -1,6 +1,6 @@
 # "Magic Methods" of Python Objects
 
-__str__ : The Fruit class overrides the __str__ method for a formatted string representation. 
+The __str__ method of the Fruit class has been overridden for a formatted string representation. 
 
 ```python runnable
 class Fruit:
@@ -24,6 +24,7 @@ print(apple)                            # Red Apple
 print(banana)                           # Yellow Banana
 print(carrot)                           # <__main__.Vegetable object at 0x000000000000>
 ```
+The __eq__ method has been overridden to check the equality of objects. Note that in the __eq__ method, we ensure that the passed other object is of the correct type before checking equality to avoid errors.
 
 ```python runnable
 class Fruit:
