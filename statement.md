@@ -145,7 +145,6 @@ class Vegetable:
             return self.name == other.name and self.color == other.color
         return False
 
-# Klasse, die Fruits und Vegetables verkettet
 class GroceryList:
     def __init__(self):
         self.items = []
@@ -164,14 +163,15 @@ class GroceryList:
             return item
         raise StopIteration
 
-# Beispiel Verwendung
 grocery_list = GroceryList()
 grocery_list.add_item(Fruit("Apple", "Red"))
 grocery_list.add_item(Fruit("Banana", "Yellow"))
 grocery_list.add_item(Vegetable("Carrot", "Orange"))
 
 for item in grocery_list:
-    print(item)
+    print(item)             # Red Apple
+                            # Yellow Banana
+                            # Orange Carrot
 ```
 
 
