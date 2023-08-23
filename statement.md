@@ -21,7 +21,7 @@ banana = Fruit("Banana", "Yellow")
 carrot = Vegetable("Carrot", "Orange")
 
 print(apple)                            # Red Apple
-print(carrot)                           # ??
+print(carrot)                           # <__main__.Vegetable object at 0x000000000000>
 ```
 
 ```python runnable
