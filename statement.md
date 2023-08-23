@@ -28,9 +28,10 @@ The `__eq__` method has been overridden to check the equality of objects. Note t
 
 ```python runnable
 class Fruit:
-    def __init__(self, name, color):
+    def __init__(self, name, color, weight):
         self.name = name
         self.color = color
+        self.weight = weight
 
     def __eq__(self, other):
         if isinstance(other, Fruit):
@@ -38,18 +39,22 @@ class Fruit:
         return False
 
 class Vegetable:
-    def __init__(self, name, color):
+    def __init__(self, name, color, weight):
         self.name = name
         self.color = color
+        self.weight = weight
 
-apple = Fruit("Apple", "Red")
-banana = Fruit("Banana", "Yellow")
-carrot = Vegetable("Carrot", "Orange")
+apple = Fruit("Apple", "Red", "150g")
+big_apple = Fruit("Apple", "Red", "100g")
+carrot = Vegetable("Carrot", "Orange", "80g")
+long_carrot = Vegetable("Carrot", "Orange", "110g")
 
-print(apple == banana)                  # False
-print(apple == Fruit("Apple", "Red"))   # True
-print(carrot == carrot)                 # True
-print(carrot == apple)                  # False
+print(apple == apple)                                                           # True
+print(apple == big_apple)                                                       # True
+print(carrot == carrot)                                                         # True
+print(carrot == long_carrot)                                                    # False
+print(carrot.name == long_carrot.name and carrot.color == long_carrot.color)    # True
+
 ```
 Using `__getitem__`, we can retrieve the attribute values of a Fruit object using a key, and with `__setitem__`, we can update the attribute values using a key. This allows us to access and modify the attributes of an object as if it were a dictionary.
 
