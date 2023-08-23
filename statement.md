@@ -116,6 +116,63 @@ print(apple["color"])       # Red
 apple["color"] = "Green"
 print(apple)                # Green Apple
 ```
+The `add_item` method adds an element (either a Fruit or a Vegetable) to the list. By implementing the `__iter__` and `__next__` methods, we enable iteration over the list of foods.
+
+```python runnable
+class Fruit:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+
+    def __str__(self):
+        return f"{self.color} {self.name}"
+
+    def __eq__(self, other):
+        if isinstance(other, Fruit):
+            return self.name == other.name and self.color == other.color
+        return False
+
+class Vegetable:
+    def __init__(self, name, color):
+        self.name = name
+        self.color = color
+
+    def __str__(self):
+        return f"{self.color} {self.name}"
+
+    def __eq__(self, other):
+        if isinstance(other, Vegetable):
+            return self.name == other.name and self.color == other.color
+        return False
+
+# Klasse, die Fruits und Vegetables verkettet
+class GroceryList:
+    def __init__(self):
+        self.items = []
+
+    def add_item(self, item):
+        self.items.append(item)
+
+    def __iter__(self):
+        self.index = 0
+        return self
+
+    def __next__(self):
+        if self.index < len(self.items):
+            item = self.items[self.index]
+            self.index += 1
+            return item
+        raise StopIteration
+
+# Beispiel Verwendung
+grocery_list = GroceryList()
+grocery_list.add_item(Fruit("Apple", "Red"))
+grocery_list.add_item(Fruit("Banana", "Yellow"))
+grocery_list.add_item(Vegetable("Carrot", "Orange"))
+
+for item in grocery_list:
+    print(item)
+```
 
 
 # Advanced usage
