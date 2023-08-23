@@ -1,4 +1,4 @@
-# Python "Magic Methods"
+# "Magic Methods" of Python Objects
 
 This Python template lets you get started quickly with a simple one-page playground.
 
