@@ -67,11 +67,6 @@ class Fruit:
     def __str__(self):
         return f"{self.color} {self.name}"
 
-    def __eq__(self, other):
-        if isinstance(other, Fruit):
-            return self.name == other.name and self.color == other.color
-        return False
-
     def __getitem__(self, key):
         if key == "name":
             return self.name
@@ -81,7 +76,7 @@ class Fruit:
             raise KeyError(f"Invalid key: {key}")
 
     def __setitem__(self, key, value):
-        if key == "name":
+        if key == "name" or key == "designation":
             self.name = value
         elif key == "color":
             self.color = value
@@ -96,19 +91,18 @@ class Vegetable:
     def __str__(self):
         return f"{self.color} {self.name}"
 
-    def __eq__(self, other):
-        if isinstance(other, Vegetable):
-            return self.name == other.name and self.color == other.color
-        return False
 
+apple = Fruit("Appel", "Red")
+print(apple["name"])                    # __getitem__
+print(apple["color"])                   # __getitem__
 
-apple = Fruit("Apple", "Red")
+apple["name"]   = "Apple"               #__setitem__
+apple["color"]  = "Green"               #__setitem__
+print(apple)                            # Green Apple
 
-print(apple["name"])        # Apple
-print(apple["color"])       # Red
-
-apple["color"] = "Green"
-print(apple)                # Green Apple
+banana = Fruit("Banana", "Gold")
+banana["designation"] = "Gros Michel"   #__setitem__
+print(banana)                           # Gros Michel Gold
 ```
 The `add_item` method adds an element (either a Fruit or a Vegetable) to the list. By implementing the `__iter__` and `__next__` methods, we enable iteration over the list of foods.
 
