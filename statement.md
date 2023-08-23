@@ -58,7 +58,6 @@ apple = Fruit("Apple", "Red")
 banana = Fruit("Banana", "Yellow")
 carrot = Vegetable("Carrot", "Orange")
 
-print(apple)                            # Red Apple
 print(apple == banana)                  # False
 print(apple == Fruit("Apple", "Red"))   # True
 print(carrot == apple)                  # False
