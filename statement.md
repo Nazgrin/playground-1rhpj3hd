@@ -1,6 +1,6 @@
 # "Magic Methods" of Python Objects
 
-The __str__ method of the Fruit class has been overridden for a formatted string representation. 
+The '__str__' method of the Fruit class has been overridden for a formatted string representation. 
 
 ```python runnable
 class Fruit:
