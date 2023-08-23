@@ -176,7 +176,7 @@ for item in grocery_list.items:
 for item in grocery_list:
     print(item)
 ```
-
+More coming soon...
 
 # Advanced usage
 
