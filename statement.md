@@ -168,10 +168,13 @@ grocery_list.add_item(Fruit("Apple", "Red"))
 grocery_list.add_item(Fruit("Banana", "Yellow"))
 grocery_list.add_item(Vegetable("Carrot", "Orange"))
 
+# Instead of using this...
+for item in grocery_list.items:
+    print(item)
+
+# You can use this...
 for item in grocery_list:
-    print(item)             # Red Apple
-                            # Yellow Banana
-                            # Orange Carrot
+    print(item)
 ```
 
 
