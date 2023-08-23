@@ -62,6 +62,7 @@ print(apple == banana)                  # False
 print(apple == Fruit("Apple", "Red"))   # True
 print(carrot == apple)                  # False
 ```
+Using __getitem__, we can retrieve the attribute values of a Fruit object using a key, and with __setitem__, we can update the attribute values using a key. This allows us to access and modify the attributes of an object as if it were a dictionary.
 
 ```python runnable
 class Fruit:
