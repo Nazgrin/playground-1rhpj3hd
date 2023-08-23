@@ -102,7 +102,7 @@ print(apple)                            # Green Apple
 
 banana = Fruit("Banana", "Gold")
 banana["designation"] = "Gros Michel"   #__setitem__
-print(banana)                           # Gros Michel Gold
+print(banana)                           # Gold Gros Michel
 ```
 The `add_item` method adds an element (either a Fruit or a Vegetable) to the list. By implementing the `__iter__` and `__next__` methods, we enable iteration over the list of foods.
 
