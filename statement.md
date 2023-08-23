@@ -102,30 +102,10 @@ print(apple)                            # Green Apple
 banana = Fruit("Banana", "Gold")
 banana["designation"] = "Gros Michel"   #                   __setitem__
 print(banana)                           # Gold Gros Michel
-```
 
-```python runnable
-class MyList:
-    def __init__(self, elements):
-        self.elements = elements
-        self.index = 0
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self.index < len(self.elements):
-            value = self.elements[self.index]
-            self.index += 1
-            return value
-        raise StopIteration
-
-# Beispiel Verwendung
-my_list = MyList([1, 2, 3, 4, 5])
-
-for item in my_list:
-    print(item)
-
+pumpkin = Vegetable("Pumpkin", "Green") 
+pumpkin.color = "Orange"                #                   __setitem__
+print(pumpkin)                          # Orange Pumpkin
 ```
 # Advanced usage
 
