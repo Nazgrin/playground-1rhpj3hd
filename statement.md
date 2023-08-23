@@ -1,6 +1,7 @@
 # "Magic Methods" of Python Objects
 
-This Python template lets you get started quickly with a simple one-page playground.
+__str__
+The Fruit class overrides the __str__ method for a formatted string representation. 
 
 ```python runnable
 class Fruit:
