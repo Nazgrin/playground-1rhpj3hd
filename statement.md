@@ -32,9 +32,6 @@ class Fruit:
         self.name = name
         self.color = color
 
-    def __str__(self):
-        return f"{self.color} {self.name}"
-
     def __eq__(self, other):
         if isinstance(other, Fruit):
             return self.name == other.name and self.color == other.color
@@ -44,15 +41,6 @@ class Vegetable:
     def __init__(self, name, color):
         self.name = name
         self.color = color
-
-    def __str__(self):
-        return f"{self.color} {self.name}"
-
-    def __eq__(self, other):
-        if isinstance(other, Vegetable):
-            return self.name == other.name and self.color == other.color
-        return False
-
 
 apple = Fruit("Apple", "Red")
 banana = Fruit("Banana", "Yellow")
