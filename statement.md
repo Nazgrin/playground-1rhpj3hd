@@ -28,7 +28,7 @@ print(carrot)                           # <__main__.Vegetable object at 0x000000
 ```
 The `__eq__` method has been overridden to check the equality of objects.
 
--Note that in the `__eq__` method, we ensure that the passed other object is of the correct type before checking equality to avoid errors (`isinstance()`).
+Note that in the `__eq__` method, we ensure that the passed other object is of the correct type before checking equality to avoid errors (`isinstance()`).
 
 ```python runnable
 class Fruit:
