@@ -16,6 +16,7 @@ class Vegetable:
         self.name = name
         self.color = color
 
+
 apple = Fruit("Apple", "Red")
 banana = Fruit("Banana", "Yellow")
 carrot = Vegetable("Carrot", "Orange")
@@ -53,6 +54,7 @@ print(apple == another_apple)                                                   
 
 print(carrot == carrot)                                                               # True
 print(carrot == another_carrot)                                                       # False
+
 print(carrot.name == another_carrot.name and carrot.color == another_carrot.color)    # True
 
 ```
@@ -90,7 +92,6 @@ class Vegetable:
 
     def __str__(self):
         return f"{self.color} {self.name}"
-
 
 apple = Fruit("Appel", "Red")
 print(apple["color"])                   # Red               __getitem__
