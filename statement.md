@@ -22,6 +22,7 @@ carrot = Vegetable("Carrot", "Orange")
 
 print(apple)                            # Red Apple
 print(banana)                           # Yellow Banana
+
 print(carrot)                           # <__main__.Vegetable object at 0x000000000000>
 ```
 The `__eq__` method has been overridden to check the equality of objects. Note that in the `__eq__` method, we ensure that the passed other object is of the correct type before checking equality to avoid errors.
@@ -43,12 +44,13 @@ class Vegetable:
         self.color = color
 
 apple = Fruit("Apple", "Red")
-big_apple = Fruit("Apple", "Red")
+another_apple = Fruit("Apple", "Red")
 carrot = Vegetable("Carrot", "Orange")
 another_carrot = Vegetable("Carrot", "Orange")
 
 print(apple == apple)                                                                 # True
-print(apple == big_apple)                                                             # True
+print(apple == another_apple)                                                         # True
+
 print(carrot == carrot)                                                               # True
 print(carrot == another_carrot)                                                       # False
 print(carrot.name == another_carrot.name and carrot.color == another_carrot.color)    # True
